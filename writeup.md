@@ -18,9 +18,9 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/placeholder.png "Model Visualization"
 [image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
+[image3]: ./examples/recovery1.jpg "Recovery Image"
+[image4]: ./examples/recovery2.jpg "Recovery Image"
+[image5]: ./examples/recovery3.jpg "Recovery Image"
 [image6]: ./examples/normal.jpg "Normal Image"
 [image7]: ./examples/jitter.jpg "Jittered Image"
 
@@ -95,7 +95,6 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 ####2. Final Model Architecture
 
 The final model architecture (model.py lines 18-31) consisted of a convolution neural network with the following layers and layer sizes:
-
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 150x320x3 RGB image   							| 
@@ -125,7 +124,7 @@ To capture good driving behavior, I first recorded two laps on track one using c
 
 ![alt text][image2]
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to trun back from road side to center. These images show what a recovery looks like starting from right side:
 
 ![alt text][image3]
 ![alt text][image4]
