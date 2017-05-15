@@ -61,7 +61,7 @@ def generator(samples, labels, batch_size=128):
 
 allsamples = []
 alllabels = []
-datarootfolder = '../data'
+datarootfolder = './data'
 datafolderlist = os.listdir(datarootfolder)
 print(datafolderlist)
 for datafolder in datafolderlist:
