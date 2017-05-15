@@ -13,6 +13,8 @@ from src.readdata import train_generator, validation_generator, \
 
 
 def buildmodel():
+	"""generate the cnn model.
+	"""
 	model = Sequential()
 	model.add(Lambda(lambda x: x / 255.0 - 0.5, input_shape=(160,320,3)))
 	model.add(Cropping2D(cropping=((70,25), (0,0))))
@@ -22,6 +24,7 @@ def buildmodel():
 	model.add(Conv2D(64, (3,3), activation="relu"))
 	model.add(Conv2D(64, (3,3), activation="relu"))
 	model.add(Flatten())
+	model.add(Dropout(0.5))
 	model.add(Dense(100))
 	model.add(Dense(50))
 	model.add(Dense(10))
@@ -44,6 +47,8 @@ def plotloss(history_object):
 
 
 def training():
+	"""training and save model.
+	"""
 	model = buildmodel()
 	history_object = model.fit_generator(
 	    train_generator, 
