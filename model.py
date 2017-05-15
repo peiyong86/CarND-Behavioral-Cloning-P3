@@ -4,6 +4,7 @@ from keras.models import Model
 from keras.models import Sequential
 from keras.layers import Flatten, Dense, Lambda, Cropping2D, Dropout
 from keras.layers.convolutional import Conv2D
+from keras.utils import plot_model
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2
@@ -31,6 +32,7 @@ def buildmodel():
 	model.add(Dense(1))
 	
 	model.compile(loss='mse', optimizer='adam')
+	plot_model(model, to_file='./examples/model.png')
 	return model
 
 
@@ -66,5 +68,5 @@ def main():
 	training()
 
 
-if __name__ = '__main__':
+if __name__ == '__main__':
 	main()
