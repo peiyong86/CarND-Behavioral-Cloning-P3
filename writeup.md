@@ -132,16 +132,17 @@ I then recorded the vehicle recovering from the left side and right sides of the
 
 Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+To augment the data sat, I also randomly shifted and rotated images thinking that this would enrich the data and reduce the overfitting. For example, here is an image that has then been augmented:
 
 ![alt text][image6]
 ![alt text][image7]
 
-Etc ....
+I didn't use flip because I collected data in both clockwise direction and counter clockwise direction, so my data already include both cases.
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+After the collection process, I had 46720 number of data points. 
+I make a augmented data set by apply random shift (-5 to 5 pixels) and rotate (-10 to 10 degrees).
+So the final number of data points are 93340.
 
+I finally randomly shuffled the data set and put 33% of the data into a validation set. 
 
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 as evidenced by "Behavioral Cloning Cheatsheet" from udacity course. I used an adam optimizer so that manually training the learning rate wasn't necessary.
